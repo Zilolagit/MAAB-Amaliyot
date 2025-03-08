@@ -1,7 +1,7 @@
 # Test Cases (TZ - Technical Requirements)
 # User Creation
 
-# Create a user with valid details.
+# Create a user with valid details
 # Attempt to create a user with an invalid email (should raise ValueError).
 # Bank Account Creation
 
@@ -22,7 +22,6 @@
 
 # Test money transfer between accounts.
 # Ensure balance updates correctly after transfer.
-
 
 from pydantic import BaseModel
 from typing import Optional
@@ -63,11 +62,6 @@ class User(BaseModel):
         except ValueError as e:
             print(e)
 
-
-
-# ? Create a bank account with a valid balance.
-# ? Ensure negative balances are not allowed.
-# ? Deposit & Withdraw Operations
 
 class BankAccount(BaseModel):
     id:Optional[str] = str(uuid.uuid4())
